@@ -13,9 +13,9 @@ public class ReadExample {
         BufferedReader br = null;
         try
         {
-            FileReader neverUsed = new FileReader("student.txt");
+            FileReader neverUsed = new FileReader("hello.world");
             br = new BufferedReader(neverUsed);
-            System.out.println("Contents of student.txt: ");
+            System.out.println("Contents of hello.world: ");
             String line;
             while ((line = br.readLine()) != null)
             {
