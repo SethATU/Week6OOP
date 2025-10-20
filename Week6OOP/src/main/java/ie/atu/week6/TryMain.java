@@ -7,10 +7,21 @@ public class TryMain {
         Scanner sc = new Scanner(System.in);
         int age = 0;
 
-        System.out.print("Enter your age: ");
-        String text = sc.nextLine().trim();
+        while (true)
+        {
+            System.out.print("Enter your age: ");
+            String text = sc.nextLine().trim();
+            try
+            {
+                age = Integer.parseInt(text);
+                System.out.println("Thanks! You entered age = " + age);
+                break;
+            }
+            catch (NumberFormatException e)
+            {
+                System.out.println("Invalid input " + e.getMessage());
+            }
 
-        age = Integer.parseInt(text);
-        System.out.print("Thanks! You entered age = " + age);
+        }
     }
 }
